@@ -55,14 +55,14 @@ class GCPValidationClassification:
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = self.GOOGLE_CREDENTIALS
         self.BUCKET_NAME = "building_images_storage"
         self.CONFIG_FILE_NAME = os.getenv("CONFIG_FILE_NAME")
-        self.GOOGLE_MAPS_API_KEY = 'AIzaSyAlgZ92OFztxC-xAOJKwKsWCESY_xFtWXE'
+        self.GOOGLE_MAPS_API_KEY = "GOOGLE_MAPS_API_KEY"
         self.geolocator = Nominatim(user_agent="myGeolocator")
         self.gmaps = googlemaps.Client(key=self.GOOGLE_MAPS_API_KEY)
         self.storage_client = storage.Client()
         self.bucket = self.storage_client.bucket(self.BUCKET_NAME)
         self.BASE_URL = 'https://api.airtable.com/v0/'
-        self.api_key = 'patxufVpMMsrxbVsx.50c4bdb9a1efc2cacffe86fefd6fc399f59643bb24a0e2215988faf3b0f1cfd8'
-        self.base_name = 'appqbJijymmUlJ3uu'
+        self.api_key = 'Your API Key'
+        self.base_name = 'Your Base Name'
         self.api = Api(self.api_key)
         self.model_path = model_path
         self.training_metadata_blob = "training_metadata.json"
